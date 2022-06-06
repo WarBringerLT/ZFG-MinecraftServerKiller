@@ -43,7 +43,7 @@ Project Statistics:
 2. Extract it to any folder. ALL Files inside /Dependencies/ are essential to run.
 3. Use Any IDE or CMD to launch python.
 
-3.1. e.g. - ``python "runme.py"``
+3.1. e.g. type ``python`` in your CMD and DRAG&DROP ``"runme.py"`` file so full location will be autofilled for you.
 
 It is Designed to be launched with no arguments, to provide user friendly "GUI" (CLI) Interface.
 
