@@ -26,7 +26,7 @@ Project Statistics:
    - Offensive server filling, preventing real players from connecting
    - Custom Join Times (Recommended to keep interval_min and interval_max times different to randomise the traffic)
 - Sending Custom Packets to Server
-   - Filling console with crashing/error-ing messages
+   - Filling console with crashing/error-ing/annoying log messages
    - Create thousands of playerfiles in server /world/playerdata 
    - UUID packet spammer ('login_spam', 'double_login' Modules) *Will produce Extremely large amounts of console-spam with UUID-resolver*) - Potentially dangerous as it with will increase disk-usage as all this spam will have to be logged. ALSO - minecraft servers unfortunately (by default) don't announce whom this traffic is coming from, so even trying to diagnose is difficult.
    - Potential use with Proxies / Proxy List is possible, (yet) here is not implemented. 
@@ -38,6 +38,14 @@ Project Statistics:
 
 
 # Installation
+
+1. Download the source code (.ZIP Project)
+2. Extract it to any folder. ALL Files inside /Dependencies/ are essential to run.
+3. Use Any IDE or CMD to launch python.
+3.1. e.g. - ``python "runme.py"``
+
+It is Designed to be launched with no arguments, to provide user friendly "GUI" (CLI) Interface.
+
 
 
     
