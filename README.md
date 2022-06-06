@@ -42,6 +42,7 @@ Project Statistics:
 1. Download the source code (.ZIP Project)
 2. Extract it to any folder. ALL Files inside /Dependencies/ are essential to run.
 3. Use Any IDE or CMD to launch python.
+
 3.1. e.g. - ``python "runme.py"``
 
 It is Designed to be launched with no arguments, to provide user friendly "GUI" (CLI) Interface.
