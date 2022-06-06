@@ -1,5 +1,5 @@
-from packet import malformed_packet, null_ping, big_handshake, login_spam, double_login
 from argparse import ArgumentParser, ArgumentTypeError
+from packet import malformed_packet, null_ping, big_handshake, login_spam, double_login
 
 
 def check_module(module):
