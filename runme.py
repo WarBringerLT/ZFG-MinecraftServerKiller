@@ -168,7 +168,7 @@ while Choice == '-1':
 			Arg_String += arg
 		Arg_String = Arg_String.replace("/",'\\')
 
-		if Instances == "1" or len(Instances) == 0: Popen("{Arg_String}", shell=True)
+		if Instances == "1" or len(Instances) == 0: Popen(f"{Arg_String}", shell=True)
 		else:
 			Logger.log(f"Full start command: {Arg_String}")
 			for i in range(0,int(Instances)): Popen(f"{Arg_String}", shell=True)
