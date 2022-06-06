@@ -3,12 +3,12 @@ from sys import exit, argv
 from os import path, system, listdir, getcwd, chdir
 from subprocess import Popen
 #####################################################
-# 
+#
 # https://github.com/WarBringerLT/
 # ZFG - Minecraft ServerKiller @@@@@ By: WarBringerLT
 # Version: v1
 # 2022 - 06 - 06
-# 
+#
 # Additional Credit: 
 # > GitHub @ Szczurowsky
 # > GitHub @ crpmax
@@ -34,13 +34,13 @@ print(f"""
 
 print("\n\n[~] Importing Logging Engine...")
 try: # Load Logging Module
-	from Dependencies.Logger_Stripped import * # https://github.com/WarBringerLT/PythonLoggingSimplifier
+	from Dependencies.Logger_Stripped import Logging # https://github.com/WarBringerLT/PythonLoggingSimplifier
 	Logger = Logging()
 	Logger.log("[+] Logger Started!")
 	Logger.log("Importing and verifying all other Dependencies...")
 except ImportError: exit(print(input("[!] Failed to load Logging Module! Please refer to GitHub Page to download the Dependencies. \n\n\n[Program Terminated.] = Press ENTER to Exit.")))
 try: # Check and Verify 'mcbots.jar' & CustomPackets
-	if path.isfile(Dependencies_MCBots) == False or path.isfile(Dependencies_CustomPackets) == False:
+	if path.isfile(Dependencies_MCBots) is False or path.isfile(Dependencies_CustomPackets) is False:
 		Logger.log(f"Could not find \"{Dependencies_MCBots}\"! Please refer to GitHub Page to download the Dependencies.")
 		exit(input("\n\n\n[Program Terminated.] = Press ENTER to Exit."))
 except ImportError: exit(input("[!] Failed to load required libs! Please refer to GitHub Page to download the Dependencies. \n\n\n[Program Terminated.] = Press ENTER to Exit."))
@@ -90,8 +90,8 @@ while Choice == '-1':
 		Arguments.append(f'-d {Interval_min} {Interval_max} ')
 		Arguments.append(f'-c {Quantity_Bot} ')
 		if Real_Names == "y": Arguments.append('-r ')  # Use Default if empty (if not 'y' - don't append.)
-		if int(Quantity_Bot) > 500 and int(Quantity_Bot) < 1000 and bool(Send_Msg) == False: Arguments.append('-m ') # Minimal run (no chat/no listeners) When MANY BOTS # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
-		if int(Quantity_Bot) > 1000 and bool(Send_Msg) == False: Arguments.append('-x ')  # MOST Minimal run. Maximum amount of mcbots # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
+		if int(Quantity_Bot) > 500 and int(Quantity_Bot) < 1000 and bool(Send_Msg) is False: Arguments.append('-m ') # Minimal run (no chat/no listeners) When MANY BOTS # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
+		if int(Quantity_Bot) > 1000 and bool(Send_Msg) is False: Arguments.append('-x ')  # MOST Minimal run. Maximum amount of mcbots # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
 		if bool(Send_Msg) == True: Arguments.append(f'-j {Send_Msg} ') # If Send_Msg contains something, add it as a send_message
 
 		Arg_String = f"java -jar \"{Dependencies_MCBots}\" "
