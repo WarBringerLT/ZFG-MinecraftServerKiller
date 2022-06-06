@@ -28,8 +28,7 @@ def pack_varint(number, max_bits=32):
     number_min = -1 << (max_bits - 1)
     number_max = +1 << (max_bits - 1)
     if not (number_min <= number < number_max):
-        raise ValueError("varint does not fit in range: %d <= %d < %d"
-                         % (number_min, number, number_max))
+        raise ValueError(f"varint does not fit in range: {number_min} <= {number} < {number_max}")
 
     if number < 0:
         number += 1 << 32
