@@ -92,7 +92,7 @@ while Choice == '-1':
 		if Real_Names == "y": Arguments.append('-r ')  # Use Default if empty (if not 'y' - don't append.)
 		if int(Quantity_Bot) > 500 and int(Quantity_Bot) < 1000 and bool(Send_Msg) is False: Arguments.append('-m ') # Minimal run (no chat/no listeners) When MANY BOTS # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
 		if int(Quantity_Bot) > 1000 and bool(Send_Msg) is False: Arguments.append('-x ')  # MOST Minimal run. Maximum amount of mcbots # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
-		if bool(Send_Msg) == True: Arguments.append(f'-j {Send_Msg} ') # If Send_Msg contains something, add it as a send_message
+		if bool(Send_Msg) is True: Arguments.append(f'-j {Send_Msg} ') # If Send_Msg contains something, add it as a send_message
 
 		Arg_String = f"java -jar \"{Dependencies_MCBots}\" "
 		for arg in Arguments:
