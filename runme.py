@@ -102,7 +102,7 @@ while Choice == '-1':
 		Logger.log("[!] Starting Attack!! [Spawning a new console window...]")
 		Logger.log(f"[>] Runtime Arguments: {Arguments}")
 
-		Logger.log("[~] Opening ({Instances}) Instances = [State: STARTING]")
+		Logger.log(f"[~] Opening ({Instances}) Instances = [State: STARTING]")
 		if Instances == "1" or len(Instances) == 0: system(f"{Arg_String}")
 		else: 
 
@@ -160,7 +160,7 @@ while Choice == '-1':
 
 		Logger.log("[!] Starting Attack!! [Spawning a new console window...]")
 		Logger.log(f"[>] Runtime Arguments: {Arguments}")
-		Logger.log("[~] Opening ({Instances}) Instances = [State: STARTING]")
+		Logger.log(f"[~] Opening ({Instances}) Instances = [State: STARTING]")
 
 
 		Arg_String = f"start python \"{Dependencies_CustomPackets}\" "
