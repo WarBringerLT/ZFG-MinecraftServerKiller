@@ -28,7 +28,8 @@ Project Statistics:
 - Sending Custom Packets to Server
    - Filling console with crashing/error-ing messages
    - Create thousands of playerfiles in server /world/playerdata 
-   - UUID packet spammer ('login_spam', 'double_login' Modules) *Will produce Extremely large amounts of console-spam with UUID-resolver*)
+   - UUID packet spammer ('login_spam', 'double_login' Modules) *Will produce Extremely large amounts of console-spam with UUID-resolver*) - Potentially dangerous as it with will increase disk-usage as all this spam will have to be logged. ALSO - minecraft servers unfortunately (by default) don't announce whom this traffic is coming from, so even trying to diagnose is difficult.
+   - Potential use with Proxies / Proxy List is possible, (yet) here is not implemented. 
 
 ![UUID-Spam](https://serving.photos.photobox.com/1831052688c07e14a1a1e4f81094dad9f5924e975b4b50581242017adc63bf0d6569ee7b.jpg "UUID Resolver Abuse")
 
