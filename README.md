@@ -18,7 +18,7 @@ Project Statistics:
    <img src="https://api.codiga.io/project/33754/score/svg" alt="Code Score" />
 </a>
 
-# Legal disclaimer
+# ⚠ ⚠ ⚠ Legal disclaimer ⚠ ⚠ ⚠
 
 This tool is created for the sole purpose of security awareness and education, it should not be used against systems that you do not have permission to test/attack. The author is not responsible for misuse or for any damage that you may cause. You agree that you use this software at your own risk.
 
