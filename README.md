@@ -4,11 +4,11 @@
 
 
 
-# ZFG-MinecraftServerKiller
+# ❌❌❌ ZFG-MinecraftServerKiller ❌❌❌
 
-Big thanks to <a href="https://github.com/Szczurowsky">GitHub:@Szczurowsky </a> & <a href="https://github.com/crpmax"> GitHub:@crpmax</a>
+✅ Big thanks to <a href="https://github.com/Szczurowsky">GitHub:@Szczurowsky </a> & <a href="https://github.com/crpmax"> GitHub:@crpmax</a>
 
-Project Statistics:
+✅ Project Statistics:
 
 <a href="https://app.codiga.io/hub/user/github/WarBringerLT">
    <img src="https://api.codiga.io/project/33754/status/svg" alt="Code Status" />
@@ -40,7 +40,7 @@ This tool is created for the sole purpose of security awareness and education, i
 #
 
 
-# Installation
+# ☢ ☢ ☢ Installation ☢ ☢ ☢
 
 Must have the **most recent Python3** version Installed.
 
