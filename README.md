@@ -51,7 +51,7 @@ Must have the **most recent Python3** version Installed.
 
 3.1. e.g. type ``python`` in your CMD and DRAG&DROP ``"runme.py"`` file so full location will be autofilled for you.
 
-I will also attach a pre-compiled .exe - Just run it, No Admin Priviliges neccesary, it all should work "out-of-the-box"; Make sure to have /Dependencies/ folder in the same folder where is .exe/runme.py
+I will also attach a pre-compiled .exe - in <a href="https://github.com/WarBringerLT/ZFG-MinecraftServerKiller/releases"> Releases (click) </a> - Just run it, No Admin Priviliges neccesary, it all should work "out-of-the-box"; Make sure to have /Dependencies/ folder in the same folder where is .exe/runme.py
 
 It is Designed to be launched with no arguments, to provide user friendly "GUI" (CLI) Interface.
 
