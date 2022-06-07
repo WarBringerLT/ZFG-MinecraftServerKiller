@@ -9,7 +9,9 @@ from sys import argv
 from time import ctime, time
 from datetime import datetime
 
-chdir(path.dirname(argv[0]))
+if len(path.dirname(argv[0])) != 0:
+	chdir(path.dirname(argv[0]))
+# Set Working Dir to Script Location
 Error_Codes = [ "INFO",    # ID 0
 				"WARNING", # ID 1
 				"ERROR",   # ID 2
