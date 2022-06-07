@@ -88,6 +88,14 @@ while Choice == '-1' or Choice == 'menu':
 		Quantity_Bot = input("How many bots?                   (default: 1): ")
 		Real_Names   = input("Generate Real Names?      (y/n)    (default: n): ")
 		Send_Msg     = input("Want to send message, if yes, enter it here (default: blank/no msg): ")
+		UseProxy     = input("Use Proxy? Enter 'SOCKS4'/'SOCKS5' or ENTER (blank=none): ").upper()
+		if len(UseProxy) > 0:
+			Logger.log(f"[>>] Selected Proxy Protocol: {UseProxy}")
+			Arguments.append(f'-t {UseProxy}')
+			UseProxyList = input("Proxy IP List location (drag&drop file): ")
+			Arguments.append(f'-l {UseProxyList} ')
+		else:
+			Logger.log("[>>] Selected Proxy: NONE! - Beware - All traffic will we seen originate from YOUR IP!")
 		Instances    = input("How many Instances? (Default: 1): ")
 
 		if len(Send_Msg) == 0: Send_Msg = False        # Check if any messages will have to be sent
@@ -160,7 +168,6 @@ while Choice == '-1' or Choice == 'menu':
 		if len(Protocol_Version) == 0: Protocol_Version = 758
 		Logger.log(f"[>>] Selected Protocol = {Protocol_Version}")
 		Arguments.append(f'-pv {Protocol_Version} ')
-
 		Instances    = input("How many Instances? (Default: 1): ")
 		if len(Instances) == 0: Instances = "1"
 		Logger.log(f"[>>] Selected Instances = {Instances}")
@@ -173,6 +180,7 @@ while Choice == '-1' or Choice == 'menu':
 		for arg in Arguments:
 			Arg_String += arg
 		Arg_String = Arg_String.replace('\\','/')
+		#Arg_String += ""
 		if Instances == "1" or len(Instances) == 0: system(Arg_String)
 		else:
 			Logger.log(f"Full start command: {Arg_String}")
