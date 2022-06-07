@@ -28,7 +28,7 @@ This tool is created for the sole purpose of security awareness and education, i
    - Server Load Testing with synthetically-increased playercount
    - Offensive server filling, preventing real players from connecting
    - Custom Join Times (Recommended to keep interval_min and interval_max times different to randomise the traffic)
-   - Server Maxplayer-filling now supports Proxy Lists. (SOCKS4/SOCKS5 Type Only)
+   - **Server Maxplayer-filling now supports Proxy Lists. (SOCKS4/SOCKS5 Type Only)**
 - Sending Custom Packets to Server
    - Filling console with crashing/error-ing/annoying log messages
    - Create thousands of playerfiles in server /world/playerdata 
