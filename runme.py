@@ -91,9 +91,7 @@ while Choice == '-1' or Choice == 'menu':
 		UseProxy     = input("Use Proxy? Enter 'SOCKS4'/'SOCKS5' or ENTER (blank=none): ").upper()
 		if len(UseProxy) > 0:
 			Logger.log(f"[>>] Selected Proxy Protocol: {UseProxy}")
-			Arguments.append(f'-t {UseProxy}')
 			UseProxyList = input("Proxy IP List location (drag&drop file): ")
-			Arguments.append(f'-l {UseProxyList} ')
 		else:
 			Logger.log("[>>] Selected Proxy: NONE! - Beware - All traffic will we seen originate from YOUR IP!")
 		Instances    = input("How many Instances? (Default: 1): ")
@@ -109,7 +107,8 @@ while Choice == '-1' or Choice == 'menu':
 		if int(Quantity_Bot) > 500 and int(Quantity_Bot) < 1000 and bool(Send_Msg) is False: Arguments.append('-m ') # Minimal run (no chat/no listeners) When MANY BOTS # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
 		if int(Quantity_Bot) > 1000 and bool(Send_Msg) is False: Arguments.append('-x ')  # MOST Minimal run. Maximum amount of mcbots # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
 		if bool(Send_Msg) is True: Arguments.append(f'-j {Send_Msg} ') # If Send_Msg contains something, add it as a send_message
-
+		Arguments.append(f'-t {UseProxy} ')
+		Arguments.append(f'-l {UseProxyList} ')
 		Arg_String = f"java -jar \"{Dependencies_MCBots}\" "
 		for arg in Arguments:
 			Arg_String += arg
@@ -184,7 +183,7 @@ while Choice == '-1' or Choice == 'menu':
 		if Instances == "1" or len(Instances) == 0: system(Arg_String)
 		else:
 			Logger.log(f"Full start command: {Arg_String}")
-			for i in range(0,int(Instances)): Popen(Arg_String, shell=True)
+			for i in range(0,int(Instances)): system(Arg_String)
 
 		Choice = 'menu' # At the end, go back to menu.  # Select Dependencies_CustomPacket
 	elif Choice == "menu":
