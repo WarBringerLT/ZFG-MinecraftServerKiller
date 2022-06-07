@@ -42,6 +42,9 @@ This tool is created for the sole purpose of security awareness and education, i
 
 # Installation
 
+Must have the **most recent Python3** version Installed.
+
+
 1. Download the source code (.ZIP Project)
 2. Extract it to any folder. ALL Files inside /Dependencies/ are essential to run.
 3. Use Any IDE or CMD to launch python.
