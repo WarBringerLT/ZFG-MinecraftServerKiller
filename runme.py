@@ -19,7 +19,7 @@ if len(path.dirname(argv[0])) != 0:
 # Set Working Dir to Script Location
 
 
-App_Version = "v1.4"
+App_Version = "v1.5"
 LauncherPath = getcwd()
 Dependencies_MCBots = LauncherPath+'/Dependencies/mcbots.jar'
 Dependencies_CustomPackets = LauncherPath+'/Dependencies/CustomPacket.py'
