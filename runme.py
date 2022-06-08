@@ -77,8 +77,9 @@ while Choice == '-1' or Choice == 'menu':
 	Choice = str(input("\n\n[>] Your Choice: "))
 	if Choice.lower() == "q" or Choice == "0": exit(Logger.log("User-requested Exit. Terminating! Byeeee"))
 	elif Choice == "1": 
-		
+		proxy_lists = []
 		Arguments = []
+		USE_PROXYLIST = ""
 		Dependencies_MCBots = Dependencies_MCBots.replace('/','\\')
 		Logger.log(f"[>] Selected: \"{Dependencies_MCBots}\"!")
 		Server_IP = input("Enter Server IP (IP:Port together): ")
@@ -89,9 +90,28 @@ while Choice == '-1' or Choice == 'menu':
 		Real_Names   = input("Generate Real Names?      (y/n)    (default: n): ")
 		Send_Msg     = input("Want to send message, if yes, enter it here (default: blank/no msg): ")
 		UseProxy     = input("Use Proxy? Enter 'SOCKS4'/'SOCKS5' or ENTER (blank=none): ").upper()
+
 		if len(UseProxy) > 0:
 			Logger.log(f"[>>] Selected Proxy Protocol: {UseProxy}")
-			UseProxyList = input("Proxy IP List location (drag&drop file): ")
+			for item in listdir():
+				if ".list" in item.lower():
+					Logger.log(f"[!] Found a '.list' file: [#{len(proxy_lists)}] {item.lower()}!")
+					proxy_lists.append(item.lower())
+			if len(proxy_lists) == 1: 
+				Logger.log("[!] Since there was only 1 .list found, it will be picked automatically.")
+				USE_PROXYLIST = proxy_lists[0]
+			else:
+				USE_PROXYLIST = ""
+				while not USE_PROXYLIST in proxy_lists: 
+					USE_PROXYLIST = input("Enter the name or the number of the proxy list you'd like to use: ").lower()
+					if USE_PROXYLIST in proxy_lists:
+						break
+					elif USE_PROXYLIST in ['0','1','2','3','4','5']:
+						USE_PROXYLIST = proxy_lists[int(USE_PROXYLIST)]
+						Logger.log(f"Selected Proxy List: {USE_PROXYLIST}")
+						break
+					else: Logger.log("You've entered an invalid file. Please refer above.")
+
 		else:
 			Logger.log("[>>] Selected Proxy: NONE! - Beware - All traffic will we seen originate from YOUR IP!")
 		Instances    = input("How many Instances? (Default: 1): ")
@@ -108,7 +128,7 @@ while Choice == '-1' or Choice == 'menu':
 		if int(Quantity_Bot) > 1000 and bool(Send_Msg) is False: Arguments.append('-x ')  # MOST Minimal run. Maximum amount of mcbots # WILL NOT BE ENABLED IF SEND_MSG IS ADDED
 		if bool(Send_Msg) is True: Arguments.append(f'-j {Send_Msg} ') # If Send_Msg contains something, add it as a send_message
 		Arguments.append(f'-t {UseProxy} ')
-		Arguments.append(f'-l {UseProxyList} ')
+		Arguments.append(f'-l {USE_PROXYLIST} ')
 		Arg_String = f"java -jar \"{Dependencies_MCBots}\" "
 		for arg in Arguments:
 			Arg_String += arg
