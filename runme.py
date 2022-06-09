@@ -140,7 +140,6 @@ while Choice == '-1' or Choice == 'menu':
 		Logger.log(f"[~] Opening ({Instances}) Instances = [State: STARTING]")
 		if Instances == "1" or len(Instances) == 0: system(f"{Arg_String}")
 		else: 
-			# WINDOWS USERS USE: #for i in range(0,int(Instances)): Popen(f"cmd.exe /c {Arg_String}")
 			for i in range(0,int(Instances)): Popen(f"{Arg_String}",shell=True)
 
 		Choice = 'menu' # At the end, go back to menu.  # Select Dependencies_MCBots
@@ -200,10 +199,9 @@ while Choice == '-1' or Choice == 'menu':
 			Arg_String += arg
 		Arg_String = Arg_String.replace('\\','/')
 		#Arg_String += ""
-		if Instances == "1" or len(Instances) == 0: system(Arg_String)
-		else:
-			Logger.log(f"Full start command: {Arg_String}")
-			for i in range(0,int(Instances)): system(Arg_String)
+		if Instances == "1" or len(Instances) == 0: system(f"{Arg_String}")
+		else: 
+			for i in range(0,int(Instances)): Popen(f"{Arg_String}",shell=True)
 
 		Choice = 'menu' # At the end, go back to menu.  # Select Dependencies_CustomPacket
 	elif Choice == "menu":
