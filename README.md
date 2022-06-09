@@ -35,6 +35,7 @@ This tool is created for the sole purpose of security awareness and education, i
    - UUID packet spammer ('login_spam', 'double_login' Modules) *Will produce Extremely large amounts of console-spam with UUID-resolver*) - Potentially dangerous as it with will increase disk-usage as all this spam will have to be logged. ALSO - minecraft servers unfortunately (by default) don't announce whom this traffic is coming from, so even trying to diagnose is difficult.
    - Potential use with Proxies / Proxy List is possible, (yet) here is not implemented. 
 
+- Can be used in combination <a href='https://github.com/WarBringerLT/ZFG_SocksUpdater'>with my other project, ZFG_SocksUpdater</a> to parse **fresh+alive** Socks4+5 Proxies to anonymise the traffic and execute attack from thousands of IPs simultaneously.
 ![UUID-Spam](https://serving.photos.photobox.com/1831052688c07e14a1a1e4f81094dad9f5924e975b4b50581242017adc63bf0d6569ee7b.jpg "UUID Resolver Abuse")
 
 
