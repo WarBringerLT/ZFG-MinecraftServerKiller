@@ -36,10 +36,10 @@ This tool is created for the sole purpose of security awareness and education, i
    - Potential use with Proxies / Proxy List is possible, (yet) here is not implemented. 
 
 - Can be used in combination <a href='https://github.com/WarBringerLT/ZFG_SocksUpdater'>with my other project, ZFG_SocksUpdater</a> to parse **fresh+alive** Socks4+5 Proxies to anonymise the traffic and execute attack from thousands of IPs simultaneously.
+
+# Console Preview (#2 attack method, 'double_login' method)
 ![UUID-Spam](https://serving.photos.photobox.com/1831052688c07e14a1a1e4f81094dad9f5924e975b4b50581242017adc63bf0d6569ee7b.jpg "UUID Resolver Abuse")
 
-
-#
 
 
 # ☢ ☢ ☢ Installation ☢ ☢ ☢
